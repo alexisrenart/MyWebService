@@ -118,7 +118,7 @@ C’est ici qu’il faut renseigner l’adresse IP ou le nom de domaine du serve
 
 [Xcode]
 
-```objc
+```objective-c
 // Cryptage Key (= 45 char.)
 #define kSalt @"Choose%a%new%key%here%:%change%it%by%your%key"
 ```
