@@ -112,11 +112,9 @@ Ces modifications sont indispensables dans la mesure où elles permettent de ren
 
 [Xcode]
 
-C’est ici qu’il faut renseigner l’adresse IP ou le nom de domaine du serveur web ; celui que j’ai précédemment demandé de bien noter ☺
+C’est ici qu’il faut renseigner l’adresse IP ou le nom de domaine du serveur web ; celui que j’ai précédemment demandé de bien noter :open_mouth:
 
 ###Modification de la clé de sécurité dans le fichier API.h
-
-[Xcode]
 
 ```objective-c
 #import "AFHTTPSessionManager.h"
@@ -127,7 +125,7 @@ C’est ici qu’il faut renseigner l’adresse IP ou le nom de domaine du serve
 ```
 
 
-Il est possible de changer la clé de sécurité permettant de crypter les mots de passe, il suffit de changer la clé ci-dessus "Choose%a%new%key%here%:%change%it%by%your%key".
+Il est possible de changer la clé de sécurité permettant de crypter les mots de passe, il suffit de changer la clé "Choose%a%new%key%here%:%change%it%by%your%key" au début du fichier API.h.
 
 ATTENTION !! Si vous changer cette clé de sécurité TOUS les utilisateurs ayant déjà été enregistrés ne pourront plus se connecter, et leur compte deviendront inutilisables !!
 
