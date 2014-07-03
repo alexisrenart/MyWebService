@@ -198,7 +198,7 @@ Et surtout je vous remercie de votre intérêt pour ce projet. :wink:
 
 ###[LinkedIn](fr.linkedin.com/pub/alexis-renart/72/59a/64b/)
 
-dev.alexis.renart@gmail.com
+###dev.alexis.renart@gmail.com
 
 #Participer
 
@@ -210,7 +210,7 @@ Si votre participation contribue à faire évoluer le projet, à l’optimiser, 
 
 Le Logo BlueFox est un logo sous copyright. Merci de ne pas copier, modifier, fusionner, publier, distribuer, ou vendre ce logo.
 
-<span style="color: #178900">*Copyright (c) 2014 Alexis RENART</span> (dev.alexis.renart@gmail.com)*</span>
+*Copyright (c) 2014 Alexis RENART (dev.alexis.renart@gmail.com)*
 
 MyWebService est disponible sous une licence CeCILL-C.  (Voir le fichier de licence pour plus d’informations.)
 
