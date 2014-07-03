@@ -18,7 +18,7 @@ MyWebService est un exemple d’application qui se connecte à un serveur web  r
 Elle a pour principale fonctionnalité de communiquer avec une base de données SQL via un encodage au format JSON des données transférées.
 
 
-![Image](../readme-image/SchemaFlux.png)
+![Image](/readme-image/SchemaFlux.png)
 
 •	Fonctionnalités essentielles :
 -	Connexion à une base SQL
