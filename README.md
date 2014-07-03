@@ -118,19 +118,16 @@ C’est ici qu’il faut renseigner l’adresse IP ou le nom de domaine du serve
 
 [Xcode]
 
-```csharp
+```objective-c
+#import "AFHTTPSessionManager.h"
+#import "AFNetworking.h"
+
 // Cryptage Key (= 45 char.)
 #define kSalt @"Choose%a%new%key%here%:%change%it%by%your%key"
 ```
 
-```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```
 
-
-Il est possible de changer la clé de sécurité permettant de crypter les mots de passe, il suffit de changer la ligne ci-dessus.
+Il est possible de changer la clé de sécurité permettant de crypter les mots de passe, il suffit de changer la clé ci-dessus "Choose%a%new%key%here%:%change%it%by%your%key".
 
 ATTENTION !! Si vous changer cette clé de sécurité TOUS les utilisateurs ayant déjà été enregistrés ne pourront plus se connecter, et leur compte deviendront inutilisables !!
 
