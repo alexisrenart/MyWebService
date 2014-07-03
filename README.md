@@ -118,6 +118,12 @@ C’est ici qu’il faut renseigner l’adresse IP ou le nom de domaine du serve
 
 [Xcode]
 
+```objective-c
+// Cryptage Key (= 45 char.)
+#define kSalt @"Choose%a%new%key%here%:%change%it%by%your%key"
+```
+
+
 Il est possible de changer la clé de sécurité permettant de crypter les mots de passe, il suffit de changer la ligne ci-dessus.
 
 ATTENTION !! Si vous changer cette clé de sécurité TOUS les utilisateurs ayant déjà été enregistrés ne pourront plus se connecter, et leur compte deviendront inutilisables !!
@@ -215,6 +221,8 @@ Le Logo BlueFox est un logo sous copyright. Merci de ne pas copier, modifier, fu
 MyWebService est disponible sous une licence CeCILL-C.  (Voir le fichier de licence pour plus d’informations.)
 
 *« CeCILL-C est une licence bien adaptée à la distribution de bibliothèques et plus généralement de composants logiciels. Tout distributeur d'une application incorporant des logiciels régis par CeCILL-C doit mettre à disposition de la communauté et soumettre à cette licence les modifications apportées à leur code source tout en gardant la liberté de choisir une autre licence pour le reste de son application. »* http://www.cecill.info/
+
+
 
 
 
