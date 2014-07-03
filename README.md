@@ -3,14 +3,14 @@ MyWebService
 
 App using SQL database on web server for user/password connection
 
-(English translation comming soon...)
+(English translation coming soon...)
 
 # Avant propos
 
-Je tiens à préciser que j’ai développé cette application en travaillant seul chez moi avec une connexion internet. Cela fait maintenant plus d’un an que j’utilise Xcode et j’ai commencé avec de simples bases en langage C et C++, c’est pourquoi je vous demande d’être indulgent s’il vous plait ☺ 
+Je tiens à préciser que j’ai développé cette application en travaillant seul chez moi avec une connexion internet. Cela fait maintenant plus d’un an que j’utilise Xcode et j’ai commencé avec de simples bases en langage C et C++, c’est pourquoi je vous demande d’être indulgent s’il vous plait :blush:
 Mais je reste attentif à toutes remarques (cf. Contact) et bien évidemment je serai ravi d’avoir un peu d’aide (cf. Participer).
 
-Pourquoi MyWebService ? Tout a commencé en voulant porter un ancien projet PHP sur application iOS, et ce projet utilise une base SQL… Dès lors j’ai commencé à chercher sur internet pour finalement ne pas trouver grand choses, si ce n’est un résultat récurrent : AFNetworking (Merci les gars, bon boulot !). J’ai donc consultés tutoriels et beaucoup d’exemple de code, puis j’ai décidé de créer un projet « coquille » avec une base SQL incluant des tables d’utilisateurs pour se connecter… C’est à ce moment que MyWebService est née !
+Pourquoi MyWebService ? Tout a commencé en voulant porter un ancien projet PHP sur application iOS, et ce projet utilise une base SQL… Dès lors j’ai commencé à chercher sur internet pour finalement ne pas trouver grand choses, si ce n’est un résultat récurrent : AFNetworking (Merci les gars, bon boulot !). J’ai donc consultés tutoriels et beaucoup d’exemple de code, puis j’ai décidé de créer un projet « coquille » avec une base SQL incluant des tables d’utilisateurs pour se connecter… C’est à ce moment que MyWebService est née ! :smirk:
 
 # Introduction
 
@@ -190,15 +190,15 @@ Je remercie internet et tous ceux qui en font une plateforme libre en partageant
 
 Merci particulièrement à tous les développeurs suivants : Scott Raymond, Mattt Thompson, Nick Lockwood, Apple, Sam Vermette,  Trevor Harmon, et beaucoup d’autres proposant des tutoriels ou des exemples de code sur internet.
 
-Et surtout je vous remercie de votre intérêt pour ce projet.
+Et surtout je vous remercie de votre intérêt pour ce projet. :wink:
 
 #Contact
 
-http://www.viadeo.com/fr/profile/alexis.renart -Viadeo!
+###[Viadeo](http://www.viadeo.com/fr/profile/alexis.renart)
 
-LinkedIn
+###[LinkedIn](fr.linkedin.com/pub/alexis-renart/72/59a/64b/)
 
-dev.alexis.renart@gmail.com
+###[dev.alexis.renart@gmail.com](dev.alexis.renart@gmail.com)
 
 #Participer
 
@@ -210,11 +210,11 @@ Si votre participation contribue à faire évoluer le projet, à l’optimiser, 
 
 Le Logo BlueFox est un logo sous copyright. Merci de ne pas copier, modifier, fusionner, publier, distribuer, ou vendre ce logo.
 
-Copyright (c) 2014 Alexis RENART (dev.alexis.renart@gmail.com)
+<span style="color: #178900">*Copyright (c) 2014 Alexis RENART (dev.alexis.renart@gmail.com)*</span>
 
 MyWebService est disponible sous une licence CeCILL-C.  (Voir le fichier de licence pour plus d’informations.)
 
-« CeCILL-C est une licence bien adaptée à la distribution de bibliothèques et plus généralement de composants logiciels. Tout distributeur d'une application incorporant des logiciels régis par CeCILL-C doit mettre à disposition de la communauté et soumettre à cette licence les modifications apportées à leur code source tout en gardant la liberté de choisir une autre licence pour le reste de son application. » http://www.cecill.info/
+*« CeCILL-C est une licence bien adaptée à la distribution de bibliothèques et plus généralement de composants logiciels. Tout distributeur d'une application incorporant des logiciels régis par CeCILL-C doit mettre à disposition de la communauté et soumettre à cette licence les modifications apportées à leur code source tout en gardant la liberté de choisir une autre licence pour le reste de son application. »* http://www.cecill.info/
 
 
 

@@ -39,6 +39,8 @@
 		5E2EF67F1949ED5500074419 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2EF67E1949ED5500074419 /* SystemConfiguration.framework */; };
 		5EA7C0F4191A42DE0022EC6E /* SplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA7C0F3191A42DE0022EC6E /* SplitViewController.m */; };
 		5EA7C0FD191A80550022EC6E /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA7C0FC191A80550022EC6E /* MasterViewController.m */; };
+		5EB21F011966080500325135 /* License-FR in Resources */ = {isa = PBXBuildFile; fileRef = 5EB21F001966080500325135 /* License-FR */; };
+		5EB21F031966082100325135 /* License-EN in Resources */ = {isa = PBXBuildFile; fileRef = 5EB21F021966082100325135 /* License-EN */; };
 		5EDBD06918FDC50700745C52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDBD06818FDC50700745C52 /* Foundation.framework */; };
 		5EDBD06B18FDC50700745C52 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDBD06A18FDC50700745C52 /* CoreGraphics.framework */; };
 		5EDBD06D18FDC50700745C52 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDBD06C18FDC50700745C52 /* UIKit.framework */; };
@@ -388,6 +390,8 @@
 		5EA7C0F3191A42DE0022EC6E /* SplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitViewController.m; sourceTree = "<group>"; };
 		5EA7C0FB191A80550022EC6E /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MasterViewController.h; path = ../MasterViewController.h; sourceTree = "<group>"; };
 		5EA7C0FC191A80550022EC6E /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MasterViewController.m; path = ../MasterViewController.m; sourceTree = "<group>"; };
+		5EB21F001966080500325135 /* License-FR */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "License-FR"; path = "../License-FR"; sourceTree = "<group>"; };
+		5EB21F021966082100325135 /* License-EN */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "License-EN"; path = "../License-EN"; sourceTree = "<group>"; };
 		5EDBD06518FDC50700745C52 /* MyWebService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWebService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EDBD06818FDC50700745C52 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5EDBD06A18FDC50700745C52 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -840,6 +844,8 @@
 		5EDBD06E18FDC50700745C52 /* MyWebService */ = {
 			isa = PBXGroup;
 			children = (
+				5EB21F001966080500325135 /* License-FR */,
+				5EB21F021966082100325135 /* License-EN */,
 				5E23763D1906A868002D96DC /* Images */,
 				5EDBD0DA18FDE55800745C52 /* Tools */,
 				5EDBD07718FDC50700745C52 /* AppDelegate.h */,
@@ -1473,6 +1479,7 @@
 				5EDBD28519016C4900745C52 /* MP.png in Resources */,
 				5E0EC68619217B10009E9510 /* iTunesArtwork.png in Resources */,
 				5EDBD27319016C4900745C52 /* LR.png in Resources */,
+				5EB21F011966080500325135 /* License-FR in Resources */,
 				5EDBD20519016C4900745C52 /* BG.png in Resources */,
 				5EDBD2A719016C4900745C52 /* PS.png in Resources */,
 				5EDBD27919016C4900745C52 /* MA.png in Resources */,
@@ -1518,6 +1525,7 @@
 				5EDBD24719016C4900745C52 /* GP.png in Resources */,
 				5EDBD2A319016C4900745C52 /* PL.png in Resources */,
 				5EDBD26E19016C4900745C52 /* LA.png in Resources */,
+				5EB21F031966082100325135 /* License-EN in Resources */,
 				5EDBD2B419016C4900745C52 /* SD.png in Resources */,
 				5E0EC67819217B10009E9510 /* Icon-40.png in Resources */,
 				5EDBD21019016C4900745C52 /* BT.png in Resources */,
