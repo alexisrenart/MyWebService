@@ -123,6 +123,12 @@ C’est ici qu’il faut renseigner l’adresse IP ou le nom de domaine du serve
 #define kSalt @"Choose%a%new%key%here%:%change%it%by%your%key"
 ```
 
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
+
 
 Il est possible de changer la clé de sécurité permettant de crypter les mots de passe, il suffit de changer la ligne ci-dessus.
 
