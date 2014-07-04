@@ -100,7 +100,13 @@ PS : Ne pas oublier de bien activer l’accès au serveur FTP !
 
 ![Image](/readme-image/BaseSQL.png)
 
-[PHP] 
+```php
+#imp//setup db connection ("server adress","USER","PASSWORD")
+$link = mysqli_connect("localhost","root","");
+mysqli_select_db($link,"database") or die("Could not selected database");
+```
+
+
 
 La connexion entre la base SQL et les fichiers PHP s’effectue dans le fichier « lib.php ». Vérifier que les données renseignées correspondent avec les utilisateurs de votre base SQL (sélectionner l’onglet « Privilèges »). 
 
