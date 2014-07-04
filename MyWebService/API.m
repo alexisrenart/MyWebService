@@ -11,7 +11,7 @@
 #import "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"
 
 // Web location of the service
-#define kAPIHost @"http://192.168.1.101/"
+#define kAPIHost @"http://localhost/"
 #define kAPIPath @"mywebservice/"
 
 @implementation API

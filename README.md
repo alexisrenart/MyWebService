@@ -116,7 +116,16 @@ Ces modifications sont indispensables dans la mesure où elles permettent de ren
 
 ###Modification de l’URL du serveur web dans le fichier API.m
 
-[Xcode]
+```objective-c
+#import "API.h"
+#import "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"
+
+// Web location of the service
+#define kAPIHost @"http://192.168.X.X/"
+#define kAPIPath @"mywebservice/"
+
+@implementation API
+```
 
 C’est ici qu’il faut renseigner l’adresse IP ou le nom de domaine du serveur web ; celui que j’ai précédemment demandé de bien noter :open_mouth:
 
