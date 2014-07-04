@@ -183,35 +183,35 @@ PS : Ne pas oublier d’ajouter « api.h » en entête des pages Xcode qui exéc
 #Exemple d’un requête SQL
 
 ##1. Fichier « index.php »
-Ouvrer le fichier et modifier le de la façon suivante :
+Ouvrer le fichier, aller jusqu'en bas et modifier le de la façon suivante :
 
 ```php
 [...]
         case "onoffline":
         onoffline($_POST['state']); break;
         
-        case "changemyusername":
-        changemyusername($_SESSION['iduser'], $_POST['newname']); break;
+        case "changemyfirstname":
+        changemyfirstname($_SESSION['iduser'], $_POST['newname']); break;
 }
 ```
 
 Ce fichier va permettre d’appeler une fonction, selon le POST, dans laquelle sera exécuter la requête SQL
 
 ##2. Fichier « api.php »
-Aller en bas du fichier et modifier le de la façon suivante :
+Aller en bas du fichier et ajouter la fonction :
 
 ```php
 [...]
 
-function changemyusername($id, $newusername) {
+function changemyfirstname($id, $newfirstname) {
 	//check if a user ID is passed
 	if (!$id) errorJson('Authorization required');
  
-    $result = query("UPDATE users SET username = '%s' WHERE iduser = '%d'", $newusername, $id);
+    $result = query("UPDATE users SET firstname = '%s' WHERE iduser = '%d'", $newfirstname, $id);
     if (!$result['error']) {
         //success
         
-        $result = query("SELECT username FROM users WHERE iduser='%s' ", $id);
+        $result = query("SELECT firstname FROM users WHERE iduser='%s' ", $id);
         if (!$result['error']) {
             //success
             print json_encode($result);
@@ -227,22 +227,80 @@ function changemyusername($id, $newusername) {
     }
     
 }
-}
 ```
-
-[PHP]
 
 C’est ici que la requête SQL est défini et exécutée dans une fonction.
 
 ##3. Xcode
-Créer un bouton sur la vue « MyProfil » associer le en tant qu’action au fichier « MyProfilViewController.h » (clique droit, glisser, id= action).
-Ci-dessous une image du résultat :
+Créer un bouton sur la vue « MyProfil » associer le en tant qu’action au fichier « MyProfilViewController.h » (clique droit, glisser, Connection = action). Puis répéter l'opération mais en connectant un TextField en Outlet.
 
-[Xcode]
+Ci-dessous le résultat attendu :
+
+
+```objective-c
+[...]
+
+- (IBAction)segmentControlBtn:(UISegmentedControl *)sender;
+
+- (IBAction)BTNtest:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UITextField *TXTFtest;
+
+@end
+```
 
 Ensuite dans « MyProfilViewController.h » aller tout en bas et ajouter ce qu’il manque :
 
-[Xcode]
+```objective-c
+[...]
+
+- (IBAction)BTNtest:(id)sender {
+    
+    [SVProgressHUD setForegroundColor:[UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1]];
+    [SVProgressHUD showWithStatus:@"Please Wait" maskType:SVProgressHUDMaskTypeGradient];
+    
+    // Build tab and sent command to JSON request
+    NSString* command = @"changemyfirstname";
+    NSMutableDictionary* params =[NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                  command, @"command",
+                                  _TXTFtest.text, @"newname",
+                                  nil];
+    // Make the call to the web API
+    [[API sharedInstance] commandWithParams:params
+                               onCompletion:^(NSDictionary *json) {
+                                   
+                                   //result returned
+                                   NSDictionary* res = [[json objectForKey:@"result"] objectAtIndex:0];
+                                   
+                                   if ([json objectForKey:@"error"]==nil) {
+                                       
+                                       [SVProgressHUD dismiss];
+                                       
+                                       // Operation success message
+                                       [[[UIAlertView alloc] initWithTitle:@"Success"
+                                                                   message:[NSString stringWithFormat:@"Your firstname have been modified. Your new firstname is %@", [res objectForKey:@"firstname"]]
+                                                                  delegate:nil
+                                                         cancelButtonTitle:@"Close"
+                                                         otherButtonTitles: nil] show];
+                                   } else {
+                                       
+                                       [SVProgressHUD dismiss];
+                                       
+                                       // Error message
+                                       [UIAlertView error:[json objectForKey:@"error"]];
+                                   }
+                                   
+                               }];
+
+    
+    
+}
+
+
+
+@end
+
+```
 
 #Remerciements
 

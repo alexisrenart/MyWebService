@@ -1026,6 +1026,39 @@
 
 /////
 
+-(void)checkConnectionStatus:(int)state {
+    [SVProgressHUD setForegroundColor:[UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1]];
+    [SVProgressHUD showWithStatus:@"Please Wait" maskType:SVProgressHUDMaskTypeGradient];
+    
+    NSString *stateStr = [NSString stringWithFormat:@"%d",state];
+    
+    // Upload the image and the title to the web service
+    [[API sharedInstance] commandWithParams:[NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                             @"onoffline",@"command",
+                                             stateStr, @"state",
+                                             nil]
+                               onCompletion:^(NSDictionary *json) {
+                                   
+                                   //completion
+                                   if (![json objectForKey:@"error"]) {
+                                       
+                                       [SVProgressHUD dismiss];
+                                       
+                                       //success
+                                       
+                                       
+                                   } else {
+                                       
+                                       [SVProgressHUD dismiss];
+                                       
+                                       //error
+                                       NSString* errorMsg = [json objectForKey:@"error"];
+                                       [UIAlertView error:errorMsg];
+                                       
+                                   }
+                                   
+                               }];
+}
 
 
 
@@ -1088,40 +1121,5 @@
     
 
 }
-
--(void)checkConnectionStatus:(int)state {
-    [SVProgressHUD setForegroundColor:[UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1]];
-    [SVProgressHUD showWithStatus:@"Please Wait" maskType:SVProgressHUDMaskTypeGradient];
-    
-    NSString *stateStr = [NSString stringWithFormat:@"%d",state];
-    
-    // Upload the image and the title to the web service
-    [[API sharedInstance] commandWithParams:[NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                             @"onoffline",@"command",
-                                             stateStr, @"state",
-                                             nil]
-                               onCompletion:^(NSDictionary *json) {
-                                   
-                                   //completion
-                                   if (![json objectForKey:@"error"]) {
-                                       
-                                       [SVProgressHUD dismiss];
-                                       
-                                       //success
-                                       
-                                       
-                                   } else {
-                                       
-                                       [SVProgressHUD dismiss];
-                                       
-                                       //error
-                                       NSString* errorMsg = [json objectForKey:@"error"];
-                                       [UIAlertView error:errorMsg];
-                                       
-                                   }
-                                   
-                               }];
-}
-
 
 @end

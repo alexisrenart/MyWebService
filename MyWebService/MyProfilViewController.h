@@ -59,5 +59,4 @@
 
 - (IBAction)segmentControlBtn:(UISegmentedControl *)sender;
 
-
 @end
