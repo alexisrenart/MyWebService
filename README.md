@@ -140,9 +140,9 @@ C’est ici qu’il faut renseigner l’adresse IP ou le nom de domaine du serve
 ```
 
 
-Il est possible de changer la clé de sécurité permettant de crypter les mots de passe, il suffit de changer la clé "Choose%a%new%key%here%:%change%it%by%your%key" au début du fichier API.h.
+Il est possible de changer la clé de sécurité permettant de crypter les mots de passe, il suffit de changer la clé **"Choose%a%new%key%here%:%change%it%by%your%key"** au début du fichier API.h.
 
-ATTENTION !! Si vous changer cette clé de sécurité TOUS les utilisateurs ayant déjà été enregistrés ne pourront plus se connecter, et leur compte deviendront inutilisables !!
+**ATTENTION !!** Si vous changer cette clé de sécurité TOUS les utilisateurs ayant déjà été enregistrés ne pourront plus se connecter, et leur compte deviendront inutilisables **!!**
 
 Il est donc recommandé de vider les tables « photos » et « users » avant tout changement de clé de sécurité.
 
@@ -154,9 +154,9 @@ Il s’agit de la première vue lorsque l’on démarre l’application, elle pe
 
 Si vous n’avez pas changé la clé de sécurité (cf. ci-dessus), il vous est possible de vous connecter avec les identifiants suivant :
 
-•	Username = user1
+•	**Username** = user1
 
-•	Password = password
+•	**Password** = password
 
 Des utilisateurs témoins sont déjà renseignés, ils possèdent tous le même mot de passe, seuls leurs noms changent.
 
@@ -185,12 +185,50 @@ PS : Ne pas oublier d’ajouter « api.h » en entête des pages Xcode qui exéc
 ##1. Fichier « index.php »
 Ouvrer le fichier et modifier le de la façon suivante :
 
-[PHP]
+```php
+[...]
+        case "onoffline":
+        onoffline($_POST['state']); break;
+        
+        case "changemyusername":
+        changemyusername($_SESSION['iduser'], $_POST['newname']); break;
+}
+```
 
 Ce fichier va permettre d’appeler une fonction, selon le POST, dans laquelle sera exécuter la requête SQL
 
 ##2. Fichier « api.php »
-Modifier le fichier comme suit :
+Aller en bas du fichier et modifier le de la façon suivante :
+
+```php
+[...]
+
+function changemyusername($id, $newusername) {
+	//check if a user ID is passed
+	if (!$id) errorJson('Authorization required');
+ 
+    $result = query("UPDATE users SET username = '%s' WHERE iduser = '%d'", $newusername, $id);
+    if (!$result['error']) {
+        //success
+        
+        $result = query("SELECT username FROM users WHERE iduser='%s' ", $id);
+        if (!$result['error']) {
+            //success
+            print json_encode($result);
+            
+        } else {
+            //error
+            errorJson('Unable SQL request');
+        }
+        
+    } else {
+        //error
+        errorJson('Save failed');
+    }
+    
+}
+}
+```
 
 [PHP]
 
