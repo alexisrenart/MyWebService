@@ -232,7 +232,7 @@ function changemyfirstname($id, $newfirstname) {
 C’est ici que la requête SQL est défini et exécutée dans une fonction.
 
 ##3. Xcode
-Créer un bouton sur la vue « MyProfil » associer le en tant qu’action au fichier « MyProfilViewController.h » (clique droit, glisser, Connection = action). Puis répéter l'opération mais en connectant un TextField en Outlet.
+Créer un bouton sur la vue « MyProfil » associer le en tant qu’action au fichier « MyProfilViewController.h » (clique droit, glisser, Connection = action). Puis répéter l'opération précédente mais en créant un TextField et en le connectant en tant qu'Outlet.
 
 Ci-dessous le résultat attendu :
 
@@ -326,11 +326,11 @@ Si votre participation contribue à faire évoluer le projet, à l’optimiser, 
 
 #Licence  et copyright
 
-Le Logo BlueFox est un logo sous copyright. Merci de ne pas copier, modifier, fusionner, publier, distribuer, ou vendre ce logo.
+Le Logo BlueFox est un logo sous copyright. Merci de ne pas le copier, le modifier, le fusionner, le publier, le distribuer, ou l'utiliser à des fins commerciales.
 
-*Copyright (c) 2014 Alexis RENART (dev.alexis.renart@gmail.com)*
+** *Copyright (c) 2014 Alexis RENART (dev.alexis.renart@gmail.com)* **
 
-MyWebService est disponible sous une licence CeCILL-C.  (Voir le fichier de licence pour plus d’informations.)
+MyWebService est disponible sous une licence **CeCILL-C**.  (*Voir le fichier de licence pour plus d’informations.*)
 
 *« CeCILL-C est une licence bien adaptée à la distribution de bibliothèques et plus généralement de composants logiciels. Tout distributeur d'une application incorporant des logiciels régis par CeCILL-C doit mettre à disposition de la communauté et soumettre à cette licence les modifications apportées à leur code source tout en gardant la liberté de choisir une autre licence pour le reste de son application. »* http://www.cecill.info/
 

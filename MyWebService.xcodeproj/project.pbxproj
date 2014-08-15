@@ -1289,9 +1289,6 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Alexis RENART";
 				TargetAttributes = {
-					5EDBD06418FDC50700745C52 = {
-						DevelopmentTeam = L23S5Y9L24;
-					};
 					5EDBD08518FDC50700745C52 = {
 						TestTargetID = 5EDBD06418FDC50700745C52;
 					};
