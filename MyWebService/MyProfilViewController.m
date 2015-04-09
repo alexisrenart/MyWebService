@@ -486,11 +486,10 @@
     CGFloat screenWidth = screenRect.size.width;
     CGFloat screenHeight = screenRect.size.height;
     
-    UITabBarController *tabbar = [self.storyboard instantiateViewControllerWithIdentifier:@"TabBar"];
-    
-    NSLog(@"FRAME : %f",  tabbar.tabBar.frame.size.height);
-    NSLog(@"FRAME : %f",  screenHeight);
-    NSLog(@"FRAME : %f",  screenWidth);
+//    UITabBarController *tabbar = [self.storyboard instantiateViewControllerWithIdentifier:@"TabBar"];
+//    NSLog(@"FRAME : %f",  tabbar.tabBar.frame.size.height);
+//    NSLog(@"FRAME : %f",  screenHeight);
+//    NSLog(@"FRAME : %f",  screenWidth);
     
     pickerView = [[UIView alloc] initWithFrame:CGRectMake(0, screenHeight-((screenHeight/3)+49) , screenWidth, screenHeight/3)];
     pickerView.backgroundColor = [UIColor whiteColor];
@@ -832,7 +831,7 @@
 
 
 ///// UPLOAD PHOTO
--(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+-(void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
     switch (buttonIndex) {
         
         case 0:
@@ -1083,7 +1082,7 @@
 }
 
 - (IBAction)photoprofilBtn:(id)sender {
-    
+
     //show the app menu
     UIActionSheet *mymenu = [[UIActionSheet alloc] initWithTitle:nil
                                                         delegate:self
@@ -1093,7 +1092,7 @@
     
     
     mymenu.destructiveButtonIndex = 2;
-    [mymenu showInView:[UIApplication sharedApplication].keyWindow];
+    [mymenu showInView:self.view];
 }
 
 - (IBAction)savechangesBtn:(id)sender {
