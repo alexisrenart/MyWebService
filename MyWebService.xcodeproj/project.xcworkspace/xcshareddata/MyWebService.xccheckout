@@ -14,7 +14,7 @@
 		<string>https://github.com/alexisrenart/MyWebService.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MyWebService.xcodeproj/project.xcworkspace</string>
+	<string>MyWebService.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>484DBC50346FD885213B0886373427FF1210FE9D</key>

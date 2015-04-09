@@ -102,6 +102,7 @@
     [adress2RegField resignFirstResponder];
     [cityRegField resignFirstResponder];
     [zipcodeRegField resignFirstResponder];
+    [pickerView removeFromSuperview];
 
 }
 
@@ -147,10 +148,10 @@
     [self dismissKeyboard];
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGFloat screenWidth = screenRect.size.height;
-    CGFloat screenHeight = screenRect.size.width;
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
     
-    pickerView = [[UIView alloc] initWithFrame:CGRectMake(0, screenHeight/3 * 2, screenWidth, screenHeight/2)];
+    pickerView = [[UIView alloc] initWithFrame:CGRectMake(0, screenHeight-(screenHeight/3) , screenWidth, screenHeight/3)];
     pickerView.backgroundColor = [UIColor whiteColor];
     
     countrypicker = [[CountryPicker alloc] initWithFrame:CGRectMake(0, 40, screenWidth, screenHeight/2 - 40)];
@@ -210,11 +211,10 @@
     [self dismissKeyboard];
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGFloat screenWidth = screenRect.size.height;
-    CGFloat screenHeight = screenRect.size.width;
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
 
-    pickerView = [[UIView alloc] initWithFrame:CGRectMake(0, screenHeight/3 * 2, screenWidth, screenHeight/2)];
-    
+    pickerView = [[UIView alloc] initWithFrame:CGRectMake(0, screenHeight-(screenHeight/3) , screenWidth, screenHeight/3)];
     pickerView.backgroundColor = [UIColor whiteColor];
     
     
