@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>FA0AA070-9F92-4880-9FB4-94F2CEBF6AFB</string>
 	<key>IDESourceControlProjectName</key>
-	<string>MyWebService</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>484DBC50346FD885213B0886373427FF1210FE9D</key>
 		<string>https://github.com/alexisrenart/MyWebService.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MyWebService.xcodeproj</string>
+	<string>MyWebService.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>484DBC50346FD885213B0886373427FF1210FE9D</key>

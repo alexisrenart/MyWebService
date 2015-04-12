@@ -47,7 +47,7 @@
 }
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControlOutlet;
 
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
+//@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) NSDictionary *usersList;
 
